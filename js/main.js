@@ -25,19 +25,19 @@
 
 // carrousel avec les images au clique
 
-var mesImages = document.getElementsByTagName('IMG');
-console.log(mesImages);
+// var mesImages = document.getElementsByTagName('IMG');
+// console.log(mesImages);
 
 
-  for (var x=0; x < mesImages.length; x++){
-  	mesImages[x].style.zIndex = "10000";
+//   for (var x=0; x < mesImages.length; x++){
+//   	mesImages[x].style.zIndex = "10000";
 
-    mesImages[x].onclick = function() {
+//     mesImages[x].onclick = function() {
 
-    	this.style.zIndex--; 
+//     	this.style.zIndex--; 
 
-    };
-}
+//     };
+// }
 
 
 
@@ -49,18 +49,22 @@ console.log(mesImages);
 // var index = 0;
 
 // previous.onclick = function() {
+    	
 //     	mesImages[index].style.zIndex--; 
+    	
+//     	console.log(mesImages[index]);
+//     	console.log (index);
+
 //     	if (index < mesImages.length) {
 //     		index ++;
-//     	} else {index = O;}
+//     	} else if (index == mesImages.length) {index = O;} 
 //     }
 
 // next.onclick = function(){
 // 	mesImages[index].style.zIndex++;
-// 	if (index < mesImages.length){
+// 	if (index < 0){
 // 		index --;
-// 	}else 
-
+// 		} else {index = mesImages.length;}
 
 // }
 
@@ -79,7 +83,71 @@ console.log(mesImages);
 // }
 
 
+// carrousel avec les images au clique
 
+var mesImages = document.getElementsByTagName('IMG');
+console.log(mesImages);
+
+var next = document.getElementById('apres');
+console.log (next);
+
+var index = 0;
+console.log(index);
+
+var previous = document.getElementById('avant');
+
+var indexA = (mesImages.length)-1;
+console.log(indexA);
+
+
+  for (var x=0; x < mesImages.length; x++){
+  	mesImages[x].style.zIndex = "10000";
+  	console.log(mesImages[x]);
+  }
+
+
+
+    previous.onclick = function() {
+    	if (indexA < mesImages.length && indexA >=0)
+    	{
+  			console.log(indexA);
+    		mesImages[indexA].style.zIndex--; 
+    		indexA --;
+    		console.log(mesImages[indexA]);
+
+    	}
+    	else if(indexA < 0)
+    	{
+    		indexA = (mesImages.length) -1;
+    		console.log(mesImages[indexA]);
+    		mesImages[indexA].style.zIndex--; 
+    		indexA --;
+    	}
+ }
+
+
+
+    next.onclick = function() {
+
+    	if ((index < mesImages.length) && (index>=0))
+    	{
+  			console.log(index);
+    		mesImages[index].style.zIndex++; 
+    		console.log(mesImages[index]);
+    		index ++;
+
+    	}
+    	else if(index == mesImages.length)
+    	{
+    		index = 0;
+    		console.log(index);
+    		console.log(mesImages[index]);
+    		mesImages[index].style.zIndex++; 
+    		index++;
+
+
+    	}
+ }
 
 
 
