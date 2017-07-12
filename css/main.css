@@ -94,6 +94,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.main
+{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 3em;
+}
 
 #carrousel {
     position: relative;
@@ -107,22 +115,9 @@ img {
 }
 
 #avant, #apres {
-    width: 30px;
-    height: 30px;
-    background-color: red;
+    cursor: pointer;
+    font-size: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

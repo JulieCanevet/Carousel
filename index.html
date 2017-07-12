@@ -9,7 +9,7 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -20,7 +20,9 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-<div id="avant"></div>
+<section class="main">
+
+<div id="avant" onclick = "precedent()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
 
         <div id="carrousel">
                 <img src="img/site.cuisine.png" alt="cuisine"/>
@@ -28,8 +30,8 @@
                 <img src="img/site.voyage.png" alt="voyage"/>
         </div>
         
-<div id="apres"></div>
-
+<div id="apres" onclick = "suivant()"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+</section>
 
 
 
