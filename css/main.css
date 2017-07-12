@@ -95,6 +95,24 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#carrousel {
+    position: relative;
+    width: 630px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+}
+
+#avant, #apres {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+
 
 
 
